@@ -1,0 +1,56 @@
+/* ==========================================================================
+   tokens.css — Design tokens only. No rules. No selectors beyond :root.
+   ========================================================================== */
+
+:root {
+  /* Colour palette */
+  --base:    #0E1013;
+  --text:    #F5F3EE;
+  --accent:  #5B6FFF;
+  --status:  #FF8A3D;
+  --line:    #2A2D33;
+
+  /* Derived surface tints (semi-transparent overlays on --base) */
+  --surface-1: rgba(42, 45, 51, 0.40);  /* faint panel fill */
+  --surface-2: rgba(42, 45, 51, 0.70);  /* stronger panel fill */
+
+  /* Focus / form boundary — must clear 3:1 against --base */
+  --focus-ring: var(--accent);          /* 4.7:1 — passes AA */
+
+  /* Typography scale (fluid, clamped) */
+  --step--1: clamp(0.8rem,  0.76rem + 0.22vw, 0.9rem);
+  --step-0:  clamp(1rem,    0.93rem + 0.35vw, 1.125rem);
+  --step-1:  clamp(1.2rem,  1.08rem + 0.58vw, 1.5rem);
+  --step-2:  clamp(1.44rem, 1.24rem + 1.02vw, 2rem);
+  --step-3:  clamp(1.73rem, 1.39rem + 1.68vw, 2.75rem);
+  --step-4:  clamp(2.07rem, 1.52rem + 2.76vw, 3.75rem);
+
+  /* Spacing scale */
+  --space-2xs: clamp(0.25rem, 0.22rem + 0.13vw, 0.3125rem);
+  --space-xs:  clamp(0.5rem,  0.46rem + 0.22vw, 0.625rem);
+  --space-s:   clamp(0.75rem, 0.70rem + 0.27vw, 0.9375rem);
+  --space-m:   clamp(1rem,    0.93rem + 0.35vw, 1.25rem);
+  --space-l:   clamp(1.5rem,  1.39rem + 0.54vw, 1.875rem);
+  --space-xl:  clamp(2rem,    1.85rem + 0.76vw, 2.5rem);
+  --space-2xl: clamp(3rem,    2.78rem + 1.09vw, 3.75rem);
+  --space-3xl: clamp(4rem,    3.70rem + 1.52vw, 5rem);
+
+  /* Layout */
+  --rail-width:   240px;
+  --canvas-max:   1200px;
+  --content-max:  720px;
+
+  /* Motion */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:  cubic-bezier(0.83, 0, 0.17, 1);
+  --dur-fast:     120ms;
+  --dur-mid:      260ms;
+  --dur-slow:     480ms;
+
+  /* Border radius */
+  --radius-s: 3px;
+  --radius-m: 6px;
+
+  /* Indicator sizes */
+  --dot-size: 8px;
+}

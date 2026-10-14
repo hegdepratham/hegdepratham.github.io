@@ -1,0 +1,152 @@
+/* ==========================================================================
+   motion.css — All animation and transition rules, plus reduced-motion
+   overrides. Motion effects live here; components.css holds structural
+   transitions (hover border-color etc.) only.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Pre-reveal state
+   The `.js` class on <html> is set by main.js before first paint.
+   Without JS, none of these rules apply — all content is visible.
+   -------------------------------------------------------------------------- */
+
+.js [data-reveal] {
+  opacity: 0;
+}
+
+.js [data-readout] {
+  opacity: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Module power-on — the core reveal vocabulary
+   Three-layer sequence:
+     a) Top-edge accent line sweeps left → right      (0 – 260 ms)
+     b) Module body fades + nudges up                 (0 – 280 ms)
+     c) [data-readout] children stagger on            (160 ms + 80 ms each)
+   -------------------------------------------------------------------------- */
+
+/* a) Border sweep — scaleX from 0 → 1 on the ::before accent strip */
+.module[data-reveal]::before {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition:
+    opacity 260ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+
+.module[data-reveal].is-powered::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* b) Module body fade-in with a subtle upward nudge */
+[data-reveal].is-powered {
+  animation: reveal-power-on 280ms var(--ease-out) both;
+}
+
+@keyframes reveal-power-on {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* c) Readout children — JS sets the delay; CSS handles the animation */
+[data-readout].is-powered {
+  animation: readout-on 180ms var(--ease-out) both;
+}
+
+@keyframes readout-on {
+  from {
+    opacity: 0;
+    translate: 0 3px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Boot sequence classes (used by boot.js)
+   -------------------------------------------------------------------------- */
+
+.boot-hidden {
+  opacity: 0 !important;
+}
+
+.boot-visible {
+  animation: boot-fade-in 240ms var(--ease-out) both;
+}
+
+@keyframes boot-fade-in {
+  from {
+    opacity: 0;
+    translate: 0 5px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Nav dot state transitions — pulse on active item
+   -------------------------------------------------------------------------- */
+
+@keyframes indicator-pulse {
+  0%, 100% { box-shadow: 0 0 0 0   color-mix(in srgb, var(--status) 60%, transparent); }
+  50%       { box-shadow: 0 0 0 5px transparent; }
+}
+
+.nav-item.is-active .nav-dot {
+  animation: indicator-pulse 2.4s var(--ease-in-out) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   5. prefers-reduced-motion — global overrides
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  /* Kill all animations and transitions site-wide */
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+    scroll-behavior:           auto   !important;
+  }
+
+  /* Show pre-reveal content immediately */
+  .js [data-reveal],
+  .js [data-readout] {
+    opacity: 1;
+  }
+
+  /* Module border — show final state instantly */
+  .module[data-reveal]::before {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+
+  /* Nav dot pulse off */
+  .nav-item.is-active .nav-dot {
+    animation: none;
+    box-shadow: 0 0 6px 1px color-mix(in srgb, var(--status) 50%, transparent);
+  }
+
+  .nav-footer__dot {
+    animation: none;
+    opacity: 1;
+  }
+
+  /* Canvas: field.js detects features.reducedMotion and renders a single static frame */
+}
+

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Prathamesh Hegde — Portfolio</title>
+  <meta name="description" content="Portfolio of Prathamesh Hegde — third-year Information Science and Engineering student exploring web development, problem-solving, and practical applications.">
+  <meta name="author"      content="Prathamesh Hegde">
+  <meta name="robots"      content="index, follow">
+  <meta name="theme-color" content="#0E1013">
+  <link rel="canonical" href="https://hegdepratham.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://hegdepratham.github.io/">
+  <meta property="og:title"       content="Prathamesh Hegde — Portfolio">
+  <meta property="og:description" content="Portfolio of Prathamesh Hegde — third-year Information Science and Engineering student exploring web development, problem-solving, and practical applications.">
+  <meta property="og:image"       content="https://hegdepratham.github.io/assets/img/og.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Prathamesh Hegde — Portfolio">
+  <meta name="twitter:description" content="Portfolio of Prathamesh Hegde — third-year Information Science and Engineering student exploring web development, problem-solving, and practical applications.">
+  <meta name="twitter:image"       content="https://hegdepratham.github.io/assets/img/og.png">
+
+  <!-- Favicon set -->
+  <link rel="icon"             href="/assets/img/favicon.ico"            sizes="any">
+  <link rel="icon"             href="/assets/img/favicon.svg"            type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest"         href="/site.webmanifest">
+
+  <!-- Font preload — prevents layout shift -->
+  <link rel="preload" href="/assets/fonts/SpaceGrotesk-Variable.woff2"
+        as="font" type="font/woff2" crossorigin>
+
+  <!-- Stylesheets — tokens first, then base, then components, then motion -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/motion.css">
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prathamesh Hegde",
+    "url": "https://hegdepratham.github.io/",
+    "email": "hegdepratham5@gmail.com",
+    "sameAs": [
+      "https://github.com/hegdepratham",
+      "https://www.linkedin.com/in/prathamesh-hegde-7b7a12330"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip navigation — visible on focus (keyboard users) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="page-layout">
+
+    <!-- ================================================================
+         NAV RAIL — status board
+         ================================================================ -->
+    <nav class="site-nav" aria-label="Site navigation">
+
+      <!-- Mobile top bar -->
+      <div class="nav-mobile-bar">
+        <span class="nav-mobile-bar__name">Prathamesh Hegde</span>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-list"
+          aria-label="Open navigation menu"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Desktop brand -->
+      <div class="nav-brand" aria-hidden="true">
+        <div class="nav-brand__name">Prathamesh Hegde</div>
+        <div class="nav-brand__role">Third-Year ISE Student</div>
+      </div>
+
+      <!-- Section list -->
+      <ul class="nav-list" id="nav-list" role="list">
+        <li class="nav-item" data-section="hero">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <a href="#hero" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item" data-section="projects">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="nav-item" data-section="about">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <a href="#about">About</a>
+        </li>
+        <li class="nav-item" data-section="skills">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="nav-item" data-section="contact">
+          <span class="nav-dot" aria-hidden="true"></span>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Rail footer -->
+      <div class="nav-footer" aria-hidden="true">
+        <div class="nav-footer__status">
+          <span class="nav-footer__dot"></span>
+          <span>System online</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================================================
+         HEADER / HERO
+         ================================================================ -->
+    <header class="site-header" id="hero">
+      <div class="content-wrap">
+        <div class="hero">
+          <!-- Particle canvas — aria-hidden, driven by field.js -->
+          <canvas
+            class="hero__canvas"
+            aria-hidden="true"
+            id="hero-canvas"
+          ></canvas>
+
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              Third-Year ISE Student &middot; 5th Semester
+            </p>
+
+            <h1 class="hero__name" id="main-content" tabindex="-1">
+              Prathamesh Hegde
+            </h1>
+
+            <p class="hero__role">Building practical projects. Learning how systems work.</p>
+
+            <a class="hero__cta" href="#projects">
+              View projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================================================================
+         MAIN CONTENT
+         ================================================================ -->
+    <main class="site-main" aria-label="Main content">
+      <div class="content-wrap">
+
+        <!-- ────────────────────────────────────────────────────────────
+             SECTION 1 — PROJECTS
+             ──────────────────────────────────────────────────────────── -->
+        <section id="projects" aria-labelledby="projects-heading">
+          <div class="section-heading">
+            <h2 id="projects-heading">Projects</h2>
+          </div>
+
+          <!-- Project grid — five modules, four distinct shapes -->
+          <div class="section-grid">
+
+            <!-- Module 1: Wide banner — primary / featured project -->
+            <article
+              class="module module--banner span-full"
+              data-reveal
+              aria-labelledby="proj1-title"
+            >
+              <div class="module__body">
+                <header class="module__header" data-readout>
+                  <h3 class="module__title" id="proj1-title">ASIP — Smart Medical Assistant</h3>
+                  <span class="module__badge module__badge--accent">Healthcare</span>
+                </header>
+
+                <p data-readout>
+                  A voice-first web application designed to help frontline health workers identify medicines without needing to read or type complex pharmaceutical names. Captures medicine labels via device camera, runs on-device OCR with Tesseract.js, cross-references against a local medicine database using fuzzy matching, and verbally communicates dosage and safety warnings aloud.
+                </p>
+
+                <ul class="module__tags" role="list" data-readout aria-label="Technologies used">
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">HTML5</li>
+                  <li class="tag">Tesseract.js OCR</li>
+                  <li class="tag">Web Speech API</li>
+                </ul>
+
+                <dl class="module__meta-row" data-readout>
+                  <div class="meta-pair">
+                    <dt>Status</dt>
+                    <dd class="text-status">Active</dd>
+                  </div>
+                  <div class="meta-pair">
+                    <dt>Execution</dt>
+                    <dd>Client-Side (Zero Server)</dd>
+                  </div>
+                  <div class="meta-pair">
+                    <dt>Role</dt>
+                    <dd>Solo Developer</dd>
+                  </div>
+                </dl>
+
+                <div class="module__links" data-readout>
+                  <a class="module__link" href="https://github.com/hegdepratham/scan_read_medapp" target="_blank" rel="noopener noreferrer" aria-label="View ASIP Smart Medical Assistant repository on GitHub (opens in new tab)">GitHub</a>
+                  <a class="module__link" href="https://hegdepratham.github.io/asip_web_prototype_1/" target="_blank" rel="noopener noreferrer" aria-label="View live prototype of ASIP Smart Medical Assistant (opens in new tab)">Live prototype</a>
+                </div>
+              </div>
+
+              <!-- Vector Pipeline Schematic -->
+              <div class="img-slot" aria-hidden="true" data-readout>
+                <svg viewBox="0 0 640 360" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="asip-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0E1013"/>
+                      <stop offset="100%" stop-color="#14171C"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="640" height="360" fill="url(#asip-grad)"/>
+                  <rect x="24" y="24" width="592" height="312" rx="6" fill="none" stroke="#2A2D33" stroke-width="1.5"/>
+                  
+                  <line x1="24" y1="64" x2="616" y2="64" stroke="#2A2D33" stroke-width="1"/>
+                  <circle cx="48" cy="44" r="5" fill="#FF8A3D"/>
+                  <circle cx="64" cy="44" r="5" fill="#5B6FFF"/>
+                  <text x="86" y="48" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#F5F3EE">PIPELINE // OCR SCANNING &rarr; SPEECH SYNTHESIS</text>
+                  <text x="590" y="48" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#5B6FFF" text-anchor="end">ON-DEVICE</text>
+                  
+                  <!-- Step 1 -->
+                  <g transform="translate(56, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1.5"/>
+                    <rect x="20" y="22" width="104" height="72" rx="3" fill="#14171C" stroke="#5B6FFF" stroke-width="1" stroke-dasharray="3 3"/>
+                    <circle cx="72" cy="58" r="14" fill="none" stroke="#5B6FFF" stroke-width="1.5"/>
+                    <line x1="72" y1="36" x2="72" y2="80" stroke="#5B6FFF" stroke-width="1"/>
+                    <line x1="50" y1="58" x2="94" y2="58" stroke="#5B6FFF" stroke-width="1"/>
+                    <text x="72" y="122" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#F5F3EE" text-anchor="middle">1. Optical Scan</text>
+                    <text x="72" y="142" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD" text-anchor="middle">Tesseract.js OCR</text>
+                    <text x="72" y="160" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="500" fill="#5B6FFF" text-anchor="middle">Camera Feed</text>
+                  </g>
+                  
+                  <path d="M 216 191 L 244 191" stroke="#5B6FFF" stroke-width="2" stroke-linecap="round"/>
+                  <polygon points="248,191 240,187 240,195" fill="#5B6FFF"/>
+                  
+                  <!-- Step 2 -->
+                  <g transform="translate(248, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1.5"/>
+                    <rect x="20" y="22" width="104" height="72" rx="3" fill="#14171C" stroke="#2A2D33" stroke-width="1"/>
+                    <line x1="36" y1="44" x2="108" y2="44" stroke="#FF8A3D" stroke-width="2"/>
+                    <line x1="36" y1="58" x2="96" y2="58" stroke="#5B6FFF" stroke-width="2"/>
+                    <line x1="36" y1="72" x2="80" y2="72" stroke="#2A2D33" stroke-width="2"/>
+                    <text x="72" y="122" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#F5F3EE" text-anchor="middle">2. Drug Match</text>
+                    <text x="72" y="142" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD" text-anchor="middle">Fuzzy Matching</text>
+                    <text x="72" y="160" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="500" fill="#FF8A3D" text-anchor="middle">Local Dataset</text>
+                  </g>
+                  
+                  <path d="M 408 191 L 436 191" stroke="#5B6FFF" stroke-width="2" stroke-linecap="round"/>
+                  <polygon points="440,191 432,187 432,195" fill="#5B6FFF"/>
+                  
+                  <!-- Step 3 -->
+                  <g transform="translate(440, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1.5"/>
+                    <rect x="20" y="22" width="104" height="72" rx="3" fill="#14171C" stroke="#2A2D33" stroke-width="1"/>
+                    <path d="M 48 58 L 58 58 L 70 46 L 70 70 L 58 58 Z" fill="#5B6FFF"/>
+                    <path d="M 76 51 Q 84 58 76 65" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M 84 44 Q 96 58 84 72" fill="none" stroke="#5B6FFF" stroke-width="2" stroke-linecap="round"/>
+                    <text x="72" y="122" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#F5F3EE" text-anchor="middle">3. Voice Output</text>
+                    <text x="72" y="142" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD" text-anchor="middle">Web Speech API</text>
+                    <text x="72" y="160" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="500" fill="#5B6FFF" text-anchor="middle">Dosage &amp; Safety</text>
+                  </g>
+                </svg>
+              </div>
+            </article>
+
+            <!-- Module 2: Tall column — detail-heavy project -->
+            <article
+              class="module module--tall span-main"
+              data-reveal
+              aria-labelledby="proj2-title"
+            >
+              <header class="module__header" data-readout>
+                <h3 class="module__title" id="proj2-title">TH9 Clan Tracker</h3>
+                <span class="module__badge module__badge--status">Full Stack</span>
+              </header>
+
+              <p data-readout>
+                A web application for tracking Clash of Clans Town Hall 9 clan visits. Supports bulk CSV and pipe-delimited list imports with preview and duplicate detection, interactive visit tracking with 5-second undo, search and status filtering, single-user session authentication with bcrypt hashing, and PWA capabilities backed by 57 automated smoke tests.
+              </p>
+
+              <ul class="module__tags" role="list" data-readout aria-label="Technologies used">
+                <li class="tag">React 18</li>
+                <li class="tag">Vite</li>
+                <li class="tag">Express 4</li>
+                <li class="tag">PostgreSQL (Neon)</li>
+                <li class="tag">PWA</li>
+              </ul>
+
+              <!-- Vector Architecture Schematic -->
+              <div class="img-slot module__img" data-readout style="aspect-ratio: 4/5; margin-block: var(--space-l);" aria-hidden="true">
+                <svg viewBox="0 0 400 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="th9-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0E1013"/>
+                      <stop offset="100%" stop-color="#14171C"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="500" fill="url(#th9-grad)"/>
+                  <rect x="20" y="20" width="360" height="460" rx="6" fill="none" stroke="#2A2D33" stroke-width="1.5"/>
+                  
+                  <line x1="20" y1="60" x2="380" y2="60" stroke="#2A2D33" stroke-width="1"/>
+                  <text x="36" y="44" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F5F3EE">TH9 TRACKER // SYSTEM STACK</text>
+                  <text x="364" y="44" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#FF8A3D" text-anchor="end">57 TESTS PASS</text>
+                  
+                  <!-- Progression preview -->
+                  <g transform="translate(36, 76)">
+                    <rect width="328" height="90" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1"/>
+                    <text x="16" y="26" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#9BA1AD">VISIT PROGRESSION &middot; ~80 CLANS</text>
+                    <rect x="16" y="38" width="296" height="10" rx="5" fill="#1E2228"/>
+                    <rect x="16" y="38" width="185" height="10" rx="5" fill="#5B6FFF"/>
+                    <text x="16" y="72" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#F5F3EE">62%</text>
+                    <text x="64" y="72" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">50 Visited &middot; 30 Remaining</text>
+                  </g>
+                  
+                  <!-- Layer 1: Client -->
+                  <g transform="translate(36, 182)">
+                    <rect width="328" height="52" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1"/>
+                    <circle cx="24" cy="26" r="6" fill="#5B6FFF"/>
+                    <text x="42" y="24" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F5F3EE">SPA Client</text>
+                    <text x="42" y="40" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">React 18 &middot; Vite &middot; Service Worker (PWA)</text>
+                  </g>
+                  
+                  <!-- Layer 2: API -->
+                  <g transform="translate(36, 246)">
+                    <rect width="328" height="52" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1"/>
+                    <circle cx="24" cy="26" r="6" fill="#FF8A3D"/>
+                    <text x="42" y="24" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F5F3EE">Express 4 API</text>
+                    <text x="42" y="40" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">Bcrypt &middot; Session Cookies &middot; Rate Limiting</text>
+                  </g>
+                  
+                  <!-- Layer 3: Database -->
+                  <g transform="translate(36, 310)">
+                    <rect width="328" height="52" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1"/>
+                    <circle cx="24" cy="26" r="6" fill="#5B6FFF"/>
+                    <text x="42" y="24" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#F5F3EE">PostgreSQL (Neon)</text>
+                    <text x="42" y="40" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">Parameterized Queries &middot; 3 Tables</text>
+                  </g>
+                  
+                  <!-- Feature list -->
+                  <g transform="translate(36, 378)">
+                    <rect width="328" height="78" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-dasharray="2 4"/>
+                    <text x="16" y="26" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" fill="#5B6FFF">&gt; VERIFIED CAPABILITIES</text>
+                    <text x="16" y="46" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; CSV/Pipe Import with duplicate checking</text>
+                    <text x="16" y="64" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; 5-second undo &middot; Search &middot; CSV Export</text>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="module__links" data-readout>
+                <a class="module__link" href="https://github.com/hegdepratham/th9-clan-tracker" target="_blank" rel="noopener noreferrer" aria-label="View TH9 Clan Tracker repository on GitHub (opens in new tab)">GitHub</a>
+              </div>
+            </article>
+
+            <!-- Module 3: Compact tile — utility / experiment -->
+            <article
+              class="module module--tile"
+              data-reveal
+              aria-labelledby="proj3-title"
+              style="align-self: start;"
+            >
+              <header class="module__header" data-readout>
+                <h3 class="module__title" id="proj3-title">CoC Protocol Test Client</h3>
+                <span class="module__badge">Systems</span>
+              </header>
+
+              <p class="text-muted" data-readout>
+                A Node.js network testing client for Clash of Clans server protocol communication. Sends and parses encrypted protocol messages over raw TCP sockets using an RC4 stream cipher and custom ByteWriter/ByteReader binary framing.
+              </p>
+
+              <ul class="module__tags" role="list" data-readout aria-label="Technologies used">
+                <li class="tag">Node.js</li>
+                <li class="tag">TCP Sockets</li>
+                <li class="tag">RC4</li>
+              </ul>
+
+              <div class="module__links" data-readout>
+                <a class="module__link" href="https://github.com/hegdepratham/coc-protocol-test-client" target="_blank" rel="noopener noreferrer" aria-label="View CoC Protocol Test Client repository on GitHub (opens in new tab)">GitHub</a>
+              </div>
+            </article>
+
+            <!-- Module 4: Second compact tile — pairs with module 3 -->
+            <article
+              class="module module--tile"
+              data-reveal
+              aria-labelledby="proj4-title"
+              style="align-self: start;"
+            >
+              <header class="module__header" data-readout>
+                <h3 class="module__title" id="proj4-title">ChiefHub</h3>
+                <span class="module__badge module__badge--status">In Progress</span>
+              </header>
+
+              <p class="text-muted" data-readout>
+                A real-time community hub for gaming clans. Built with Next.js, React, and Socket.io for live chat channels and clan coordination, with SQLite (better-sqlite3) for persistent message and roster storage.
+              </p>
+
+              <ul class="module__tags" role="list" data-readout aria-label="Technologies used">
+                <li class="tag">TypeScript</li>
+                <li class="tag">Next.js</li>
+                <li class="tag">Socket.io</li>
+                <li class="tag">SQLite</li>
+              </ul>
+
+              <div class="module__links" data-readout>
+                <a class="module__link" href="https://github.com/hegdepratham/chiefhub" target="_blank" rel="noopener noreferrer" aria-label="View ChiefHub repository on GitHub (opens in new tab)">GitHub</a>
+              </div>
+            </article>
+
+            <!-- Module 5: Full-width split — strong visual output -->
+            <article
+              class="module module--split span-full"
+              data-reveal
+              aria-labelledby="proj5-title"
+            >
+              <div class="module__body">
+                <header class="module__header" data-readout>
+                  <h3 class="module__title" id="proj5-title">Kaveri Spares Agent</h3>
+                  <span class="module__badge module__badge--accent">Cypher 2026</span>
+                </header>
+
+                <p data-readout>
+                  An operations desk decision agent built for Cypher 2026 (The Spare Parts Desk). Scans inventory, sales velocity, supplier leads, and purchase orders to detect stockouts, sudden demand spikes, and overdue shipments. Evaluates transfer-before-buy trade-offs to minimize procurement costs before drafting actionable purchase orders for review.
+                </p>
+
+                <dl class="module__meta-row" data-readout>
+                  <div class="meta-pair">
+                    <dt>Status</dt>
+                    <dd class="text-status">Deployed</dd>
+                  </div>
+                  <div class="meta-pair">
+                    <dt>Architecture</dt>
+                    <dd>React &middot; Node.js &middot; SQLite</dd>
+                  </div>
+                  <div class="meta-pair">
+                    <dt>Evaluation</dt>
+                    <dd>Transfer Before Buy</dd>
+                  </div>
+                </dl>
+
+                <ul class="module__tags" role="list" data-readout aria-label="Technologies used">
+                  <li class="tag">React</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">Express</li>
+                  <li class="tag">SQLite</li>
+                  <li class="tag">Groq API</li>
+                </ul>
+
+                <div class="module__links" data-readout>
+                  <a class="module__link" href="https://github.com/hegdepratham/pratham_Cypher" target="_blank" rel="noopener noreferrer" aria-label="View Kaveri Spares Agent repository on GitHub (opens in new tab)">GitHub</a>
+                  <a class="module__link" href="https://spare-parts-desk.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="View live demo of Kaveri Spares Agent (opens in new tab)">Live demo</a>
+                </div>
+              </div>
+
+              <!-- Vector Decision Schematic -->
+              <div class="img-slot" aria-hidden="true" data-readout>
+                <svg viewBox="0 0 640 360" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="cypher-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0E1013"/>
+                      <stop offset="100%" stop-color="#14171C"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="640" height="360" fill="url(#cypher-grad)"/>
+                  <rect x="24" y="24" width="592" height="312" rx="6" fill="none" stroke="#2A2D33" stroke-width="1.5"/>
+                  
+                  <line x1="24" y1="64" x2="616" y2="64" stroke="#2A2D33" stroke-width="1"/>
+                  <circle cx="48" cy="44" r="5" fill="#5B6FFF"/>
+                  <circle cx="64" cy="44" r="5" fill="#FF8A3D"/>
+                  <text x="86" y="48" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#F5F3EE">DECISION ENGINE // TRANSFER-BEFORE-BUY FLOW</text>
+                  <text x="590" y="48" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="500" fill="#FF8A3D" text-anchor="end">LIVE ON VERCEL</text>
+                  
+                  <!-- Step 1 -->
+                  <g transform="translate(56, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1.5"/>
+                    <rect x="14" y="16" width="116" height="32" rx="3" fill="#14171C"/>
+                    <text x="72" y="36" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F3EE" text-anchor="middle">Data Ingestion</text>
+                    <line x1="24" y1="68" x2="120" y2="68" stroke="#2A2D33" stroke-width="1"/>
+                    <text x="24" y="90" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Stock Balances</text>
+                    <text x="24" y="112" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Sales Velocity</text>
+                    <text x="24" y="134" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Overdue POs</text>
+                    <text x="24" y="156" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Supplier Lead Time</text>
+                  </g>
+                  
+                  <path d="M 216 191 L 244 191" stroke="#5B6FFF" stroke-width="2" stroke-linecap="round"/>
+                  <polygon points="248,191 240,187 240,195" fill="#5B6FFF"/>
+                  
+                  <!-- Step 2 -->
+                  <g transform="translate(248, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#5B6FFF" stroke-width="1.5"/>
+                    <rect x="14" y="16" width="116" height="32" rx="3" fill="rgba(91,111,255,0.12)"/>
+                    <text x="72" y="36" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#5B6FFF" text-anchor="middle">Rules Engine</text>
+                    <line x1="24" y1="68" x2="120" y2="68" stroke="#2A2D33" stroke-width="1"/>
+                    <text x="24" y="90" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#F5F3EE">&bull; Stockout Alerts</text>
+                    <text x="24" y="112" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#F5F3EE">&bull; Branch Matching</text>
+                    <text x="24" y="134" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#FF8A3D">&bull; Transfer vs Buy</text>
+                    <text x="24" y="156" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Cost Rationale</text>
+                  </g>
+                  
+                  <path d="M 408 191 L 436 191" stroke="#5B6FFF" stroke-width="2" stroke-linecap="round"/>
+                  <polygon points="440,191 432,187 432,195" fill="#5B6FFF"/>
+                  
+                  <!-- Step 3 -->
+                  <g transform="translate(440, 96)">
+                    <rect width="144" height="190" rx="4" fill="#0E1013" stroke="#2A2D33" stroke-width="1.5"/>
+                    <rect x="14" y="16" width="116" height="32" rx="3" fill="#14171C"/>
+                    <text x="72" y="36" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F3EE" text-anchor="middle">Action Desk</text>
+                    <line x1="24" y1="68" x2="120" y2="68" stroke="#2A2D33" stroke-width="1"/>
+                    <text x="24" y="90" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; Transfer Drafts</text>
+                    <text x="24" y="112" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#9BA1AD">&bull; PO Generation</text>
+                    <text x="24" y="134" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#5B6FFF">&bull; LLM Explanations</text>
+                    <text x="24" y="156" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="400" fill="#FF8A3D">&bull; Approve / Reject</text>
+                  </g>
+                </svg>
+              </div>
+            </article>
+
+          </div><!-- /.section-grid -->
+        </section>
+
+        <!-- ────────────────────────────────────────────────────────────
+             SECTION 2 — ABOUT
+             ──────────────────────────────────────────────────────────── -->
+        <section id="about" aria-labelledby="about-heading">
+          <div class="section-heading">
+            <h2 id="about-heading">About</h2>
+          </div>
+
+          <div class="about-layout">
+
+            <!-- ── Left: Profile card ──────────────────────────────────── -->
+            <aside class="profile-card module" data-reveal aria-label="Profile summary">
+
+              <!-- Vector Identity Emblem (intentional visual without photograph) -->
+              <div class="profile-card__photo img-slot" data-readout aria-hidden="true">
+                <svg viewBox="0 0 220 280" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="ph-card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0E1013"/>
+                      <stop offset="100%" stop-color="#14171C"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="220" height="280" fill="url(#ph-card-grad)"/>
+                  <path d="M 16 36 L 16 16 L 36 16" stroke="#5B6FFF" stroke-width="1.5" fill="none"/>
+                  <path d="M 204 36 L 204 16 L 184 16" stroke="#5B6FFF" stroke-width="1.5" fill="none"/>
+                  <path d="M 16 244 L 16 264 L 36 264" stroke="#5B6FFF" stroke-width="1.5" fill="none"/>
+                  <path d="M 204 244 L 204 264 L 184 264" stroke="#5B6FFF" stroke-width="1.5" fill="none"/>
+                  <line x1="16" y1="100" x2="204" y2="100" stroke="#2A2D33" stroke-width="1" stroke-dasharray="2 4"/>
+                  <line x1="16" y1="180" x2="204" y2="180" stroke="#2A2D33" stroke-width="1" stroke-dasharray="2 4"/>
+                  <line x1="110" y1="16" x2="110" y2="264" stroke="#2A2D33" stroke-width="1" stroke-dasharray="2 4"/>
+                  <circle cx="110" cy="120" r="46" fill="rgba(91,111,255,0.06)" stroke="#5B6FFF" stroke-width="1.5"/>
+                  <circle cx="110" cy="120" r="39" fill="none" stroke="#2A2D33" stroke-width="1"/>
+                  <text x="110" y="130" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="700" fill="#F5F3EE" text-anchor="middle" letter-spacing="-0.02em">PH</text>
+                  <circle cx="144" cy="86" r="4.5" fill="#FF8A3D"/>
+                  <rect x="52" y="196" width="116" height="24" rx="3" fill="#0E1013" stroke="#2A2D33" stroke-width="1"/>
+                  <text x="110" y="212" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="600" fill="#5B6FFF" text-anchor="middle" letter-spacing="0.08em">ISE // SEM 05</text>
+                  <text x="110" y="246" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="400" fill="#9BA1AD" text-anchor="middle">STUDENT DEVELOPER</text>
+                </svg>
+              </div>
+
+              <!-- Identity readout -->
+              <div class="profile-card__identity" data-readout>
+                <p class="profile-card__name">Prathamesh Hegde</p>
+                <p class="profile-card__role text-muted">Third-Year ISE Student</p>
+              </div>
+
+              <!-- Status readout table -->
+              <dl class="profile-card__readout" data-readout>
+                <div class="profile-readout-row">
+                  <dt>Status</dt>
+                  <dd>
+                    <span class="profile-status-dot" aria-hidden="true"></span>
+                    Available
+                  </dd>
+                </div>
+                <div class="profile-readout-row">
+                  <dt>Location</dt>
+                  <dd>India</dd>
+                </div>
+                <div class="profile-readout-row">
+                  <dt>Stage</dt>
+                  <dd>ISE (5th Sem)</dd>
+                </div>
+                <div class="profile-readout-row">
+                  <dt>Focus</dt>
+                  <dd>Web &amp; Problem-Solving</dd>
+                </div>
+              </dl>
+
+              <!-- Contact shortcut -->
+              <div class="profile-card__links" data-readout>
+                <a
+                  class="module__link"
+                  href="https://github.com/hegdepratham"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View GitHub profile (opens in new tab)"
+                >GitHub</a>
+                <a
+                  class="module__link"
+                  href="https://www.linkedin.com/in/prathamesh-hegde-7b7a12330"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View LinkedIn profile (opens in new tab)"
+                >LinkedIn</a>
+              </div>
+            </aside>
+
+            <!-- ── Right: Bio text module ──────────────────────────────── -->
+            <article class="about-bio module" data-reveal aria-labelledby="about-bio-heading">
+              <header class="module__header" data-readout>
+                <h3 class="module__title" id="about-bio-heading">Hi, I'm Prathamesh.</h3>
+                <span class="module__badge module__badge--accent">Open to opportunities</span>
+              </header>
+
+              <p data-readout>
+                I'm Prathamesh Hegde, a third-year Information Science and Engineering student currently in my fifth semester.
+              </p>
+
+              <p style="margin-block-start: var(--space-m);" data-readout>
+                I'm building my skills in software development by working on practical projects, exploring new technologies, and turning ideas into functional applications. I'm particularly interested in web development, problem-solving, and building tools that solve real-world problems.
+              </p>
+
+              <p style="margin-block-start: var(--space-m);" data-readout>
+                I'm still learning, experimenting, and improving with every project. My goal is to become a capable software developer who can build useful, reliable, and thoughtfully designed applications.
+              </p>
+
+              <!-- Core interests readout chips -->
+              <div style="margin-block-start: var(--space-l);" data-readout>
+                <p class="text-muted" style="font-size: var(--step--1); margin-block-end: var(--space-xs);">Core interests</p>
+                <ul class="module__tags" role="list" aria-label="Core interests">
+                  <li class="tag">Web Development</li>
+                  <li class="tag">Software Engineering</li>
+                  <li class="tag">Problem-Solving</li>
+                  <li class="tag">Building Practical Applications</li>
+                </ul>
+              </div>
+
+              <div class="module__links" style="margin-block-start: var(--space-xl);" data-readout>
+                <a class="module__link" href="#contact">Get in touch</a>
+                <a class="module__link" href="#projects">See my work</a>
+              </div>
+            </article>
+
+          </div><!-- /.about-layout -->
+        </section>
+
+        <!-- ────────────────────────────────────────────────────────────
+             SECTION 3 — SKILLS
+             ──────────────────────────────────────────────────────────── -->
+        <section id="skills" aria-labelledby="skills-heading">
+          <div class="section-heading">
+            <h2 id="skills-heading">Skills</h2>
+          </div>
+
+          <!-- Systems panel — outer module wrapper -->
+          <article class="module skills-module" data-reveal aria-labelledby="skills-panel-heading">
+
+            <!-- Panel header with legend -->
+            <header class="skills-module__header" data-readout>
+              <h3 class="module__title" id="skills-panel-heading">Capability readout</h3>
+
+              <!-- Dot legend — makes status dots meaningful, not decorative -->
+              <ul class="skills-legend" role="list" aria-label="Status key">
+                <li class="skills-legend__item">
+                  <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                  <span>Active</span>
+                </li>
+                <li class="skills-legend__item">
+                  <span class="skill-item__dot skill-item__dot--learning" aria-hidden="true"></span>
+                  <span>Learning</span>
+                </li>
+                <li class="skills-legend__item">
+                  <span class="skill-item__dot skill-item__dot--idle" aria-hidden="true"></span>
+                  <span>Exploring</span>
+                </li>
+              </ul>
+            </header>
+
+            <!-- Skill groups grid -->
+            <div class="skills-panel">
+
+              <!-- Group 1 — Languages -->
+              <div class="skill-group" data-readout>
+                <h4 class="skill-group__label">Languages</h4>
+                <ul class="skill-list" role="list">
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">Python</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">JavaScript</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--learning" aria-hidden="true"></span>
+                    <span class="skill-item__name">C</span>
+                    <span class="skill-item__tag">Learning</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--learning" aria-hidden="true"></span>
+                    <span class="skill-item__name">TypeScript</span>
+                    <span class="skill-item__tag">Learning</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Group 2 — Web -->
+              <div class="skill-group" data-readout>
+                <h4 class="skill-group__label">Web</h4>
+                <ul class="skill-list" role="list">
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">HTML</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">CSS</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--learning" aria-hidden="true"></span>
+                    <span class="skill-item__name">React</span>
+                    <span class="skill-item__tag">Learning</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Group 3 — Tools -->
+              <div class="skill-group" data-readout>
+                <h4 class="skill-group__label">Tools</h4>
+                <ul class="skill-list" role="list">
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">Git / GitHub</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">VS Code</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--idle" aria-hidden="true"></span>
+                    <span class="skill-item__name">Linux CLI</span>
+                    <span class="skill-item__tag">Exploring</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Group 4 — Concepts -->
+              <div class="skill-group" data-readout>
+                <h4 class="skill-group__label">Concepts</h4>
+                <ul class="skill-list" role="list">
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--active" aria-hidden="true"></span>
+                    <span class="skill-item__name">Data structures</span>
+                    <span class="skill-item__tag">Active</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--learning" aria-hidden="true"></span>
+                    <span class="skill-item__name">Algorithms</span>
+                    <span class="skill-item__tag">Learning</span>
+                  </li>
+                  <li class="skill-item">
+                    <span class="skill-item__dot skill-item__dot--idle" aria-hidden="true"></span>
+                    <span class="skill-item__name">System design</span>
+                    <span class="skill-item__tag">Exploring</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div><!-- /.skills-panel -->
+          </article>
+
+        </section>
+
+        <!-- ────────────────────────────────────────────────────────────
+             SECTION 4 — CONTACT
+             ──────────────────────────────────────────────────────────── -->
+        <section id="contact" aria-labelledby="contact-heading">
+          <div class="section-heading">
+            <h2 id="contact-heading">Contact</h2>
+          </div>
+
+          <!-- Contact module — split: intro left, channels right -->
+          <article class="module contact-module" data-reveal aria-labelledby="contact-module-heading">
+
+            <!-- Left: intro -->
+            <div class="contact-intro">
+              <h3 class="module__title" id="contact-module-heading" data-readout>Let's talk.</h3>
+              <p class="text-muted" style="margin-block-start: var(--space-m);" data-readout>
+                I'm a student open to project collaborations, internship
+                conversations, and anything interesting. Pick whichever
+                channel works best for you.
+              </p>
+              <p style="margin-block-start: var(--space-m);" data-readout>
+                Fastest response: <a href="mailto:hegdepratham5@gmail.com">email</a>.
+              </p>
+            </div>
+
+            <!-- Right: channel list -->
+            <div class="contact-channels">
+              <ul class="contact-list" role="list">
+
+              <!-- Email -->
+              <li class="contact-list__item" data-readout>
+                <a
+                  class="contact-item"
+                  href="mailto:hegdepratham5@gmail.com"
+                  aria-label="Send email to Prathamesh Hegde"
+                >
+                  <svg class="contact-item__icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="5" width="16" height="11" rx="2"/>
+                    <polyline points="2,5 10,11 18,5"/>
+                  </svg>
+                  <span>
+                    <span class="contact-item__label">Email</span>
+                    <span class="contact-item__detail">hegdepratham5@gmail.com</span>
+                  </span>
+                </a>
+                <button
+                  class="copy-btn"
+                  data-copy="hegdepratham5@gmail.com"
+                  aria-label="Copy email address to clipboard"
+                >
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="4" y="4" width="8" height="8" rx="1"/>
+                    <path d="M10 4V3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h1"/>
+                  </svg>
+                  <span class="copy-btn__label">Copy</span>
+                </button>
+              </li>
+
+              <!-- GitHub -->
+              <li class="contact-list__item" data-readout>
+                <a
+                  class="contact-item"
+                  href="https://github.com/hegdepratham"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Prathamesh Hegde's GitHub profile (opens in new tab)"
+                >
+                  <svg class="contact-item__icon" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 10 4.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>
+                    <span class="contact-item__label">GitHub</span>
+                    <span class="contact-item__detail">github.com/hegdepratham</span>
+                  </span>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li class="contact-list__item" data-readout>
+                <a
+                  class="contact-item"
+                  href="https://www.linkedin.com/in/prathamesh-hegde-7b7a12330"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Prathamesh Hegde's LinkedIn profile (opens in new tab)"
+                >
+                  <svg class="contact-item__icon" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm1.337 9.763H3.667v-8.59h2.675v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+                  </svg>
+                  <span>
+                    <span class="contact-item__label">LinkedIn</span>
+                    <span class="contact-item__detail">linkedin.com/in/prathamesh-hegde-7b7a12330</span>
+                  </span>
+                </a>
+              </li>
+
+            </ul>
+            </div><!-- /.contact-channels -->
+          </article>
+
+        </section>
+
+      </div><!-- /.content-wrap -->
+    </main>
+
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="site-footer__left">
+        <p class="site-footer__copy">&copy; <span id="footer-year"></span> Prathamesh Hegde.</p>
+        <p class="site-footer__made">Built with plain HTML, CSS &amp; vanilla JS.</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="#hero" class="site-footer__top">Back to top &uarr;</a>
+      </nav>
+    </footer>
+
+  </div><!-- /.page-layout -->
+
+  <!-- Scripts — main.js is the single entry point; it imports all modules -->
+  <script src="/js/main.js" type="module"></script>
+
+  <!-- Footer year — inline to avoid flash -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

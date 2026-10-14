@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hegdepratham.github.io/sitemap.xml

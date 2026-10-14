@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="#0E1013"/>
+  <!-- Accent dot -->
+  <circle cx="24" cy="8" r="3" fill="#5B6FFF"/>
+  <!-- "PH" initials -->
+  <!-- P -->
+  <text
+    x="4"
+    y="23"
+    font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="700"
+    font-size="16"
+    fill="#F5F3EE"
+    letter-spacing="-0.5"
+  >PH</text>
+</svg>
